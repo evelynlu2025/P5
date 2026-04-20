@@ -30,6 +30,25 @@ npm run preview
 
 Deploy `dist/` to Netlify, Vercel static hosting, GitHub Pages, or any static file host.
 
+## Deploy on Vercel (recommended)
+
+This repo’s Git root is the **P5** folder on GitHub (`evelynlu2025/P5`); the site code is in **`GrocerEaseLanding/`**.
+
+1. Push the latest commit to GitHub (include `GrocerEaseLanding/vercel.json`).
+2. In [Vercel](https://vercel.com/new) → **Add New Project** → import **`evelynlu2025/P5`**.
+3. Set **Root Directory** to **`GrocerEaseLanding`** (Framework Preset should pick up Vite).
+4. Under **Environment Variables**, add **`VITE_APP_ORIGIN`** = `https://grocerease-topaz.vercel.app` (or your live app URL), then deploy.
+5. Optional: **`VITE_SITE_URL`** = your new marketing URL (e.g. `https://your-landing.vercel.app`) so the footer shows the canonical link.
+
+CLI (from this folder, after `npm i -g vercel` or `npx vercel` and login):
+
+```bash
+cd GrocerEaseLanding
+npx vercel --prod
+```
+
+Link the CLI project to the same GitHub repo if you want preview deployments on every push.
+
 ## Media
 
 - **Hero / section photos** live under `public/images/` (sourced from Unsplash / Picsum during setup). Swap them for your own photography any time—keep filenames or update `src/App.tsx`.

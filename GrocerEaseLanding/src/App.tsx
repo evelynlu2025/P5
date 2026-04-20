@@ -410,7 +410,7 @@ export default function App() {
               Six founders building GrocerEase between CMU coursework and pilots with Pittsburgh
               merchants—presented for investors and neighbors alike.
             </p>
-            <div className="mx-auto mt-10 flex max-w-5xl flex-col gap-5">
+            <div className="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-5 sm:grid-cols-2">
               {team.map((member) => (
                 <article
                   key={member.name}

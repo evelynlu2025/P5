@@ -35,15 +35,15 @@ const team = [
   },
   {
     name: 'Evelyn Lo',
-    role: 'Co-founder & Product',
+    role: 'Co-founder & Design',
     image: '/team/evelynLo.jpeg',
-    bio: 'Turns grocer and shopper research into flows for map discovery, deals, and alerts—keeping the roadmap grounded in Pittsburgh neighborhoods.',
+    bio: 'Owns visual and interaction design so discovery feels fast on mobile, accessible, and trustworthy for first-time neighborhood shoppers.',
   },
   {
     name: 'Evelyn Lui',
-    role: 'Co-founder & Design',
+    role: 'Co-founder & Product',
     image: '/team/evelynLu.JPG',
-    bio: 'Owns visual and interaction design so discovery feels fast on mobile, accessible, and trustworthy for first-time neighborhood shoppers.',
+    bio: 'Turns grocer and shopper research into flows for map discovery, deals, and alerts—keeping the roadmap grounded in Pittsburgh neighborhoods.',
   },
   {
     name: 'Gabriel Sha',
@@ -257,7 +257,7 @@ export default function App() {
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <figure className="order-2 overflow-hidden rounded-2xl shadow-lg ring-1 ring-stone-200 lg:order-1">
                 <img
-                  src="/images/store-owner.jpg"
+                  src="/images/store-owner.jpeg"
                   alt="Store owner arranging products on shelves"
                   className="h-full w-full object-cover"
                   width={1200}

@@ -404,11 +404,15 @@ export default function App() {
         <section id="team" aria-labelledby="team-heading" className="border-b border-stone-200 bg-stone-50">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
             <h2 id="team-heading" className="text-3xl font-bold tracking-tight text-brand-950">
-              Team
+              About the team
             </h2>
+            <p className="mt-2 text-sm font-medium uppercase tracking-wide text-brand-700">
+              Founders
+            </p>
             <p className="mt-3 max-w-3xl text-lg text-stone-600">
               Six founders building GrocerEase between CMU coursework and pilots with Pittsburgh
-              merchants—presented for investors and neighbors alike.
+              merchants—shipping product, talking to store owners, and keeping the roadmap honest for
+              investors and neighbors alike.
             </p>
             <div className="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-5 sm:grid-cols-2">
               {team.map((member) => (

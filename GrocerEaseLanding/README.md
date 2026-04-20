@@ -34,11 +34,24 @@ Deploy `dist/` to Netlify, Vercel static hosting, GitHub Pages, or any static fi
 
 This repo’s Git root is the **P5** folder on GitHub (`evelynlu2025/P5`); the site code is in **`GrocerEaseLanding/`**.
 
-1. Push the latest commit to GitHub (include `GrocerEaseLanding/vercel.json`).
-2. In [Vercel](https://vercel.com/new) → **Add New Project** → import **`evelynlu2025/P5`**.
-3. Set **Root Directory** to **`GrocerEaseLanding`** (Framework Preset should pick up Vite).
-4. Under **Environment Variables**, add **`VITE_APP_ORIGIN`** = `https://grocerease-topaz.vercel.app` (or your live app URL), then deploy.
-5. Optional: **`VITE_SITE_URL`** = your new marketing URL (e.g. `https://your-landing.vercel.app`) so the footer shows the canonical link.
+### Option A — Deploy from repo root (simplest)
+
+A **`vercel.json` at the repo root** (`P5/vercel.json`) already points install/build/output at `GrocerEaseLanding/`. Import **`evelynlu2025/P5`** and leave **Root Directory** empty or **`.`** — do **not** set Root Directory to `GrocerEaseLanding` in this case, or Vercel will ignore the root config and look for `package.json` at the repo root (and you can get a **404**).
+
+### Option B — Root Directory = `GrocerEaseLanding`
+
+1. Import **`evelynlu2025/P5`**.
+2. Set **Root Directory** to **`GrocerEaseLanding`**.
+3. Vercel uses **`GrocerEaseLanding/vercel.json`** only.
+
+### For both options
+
+4. Under **Environment Variables**, add **`VITE_APP_ORIGIN`** = `https://grocerease-topaz.vercel.app` (or your live app URL), then redeploy.
+5. Optional: **`VITE_SITE_URL`** = your marketing site URL for the footer.
+
+### If you still see 404
+
+Open the deployment **Build Logs** in Vercel: confirm `npm run build` finished and that `dist/index.html` exists. Trigger **Redeploy** after fixing settings.
 
 CLI (from this folder, after `npm i -g vercel` or `npx vercel` and login):
 

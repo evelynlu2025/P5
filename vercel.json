@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd GrocerEaseLanding && npm install",
+  "buildCommand": "cd GrocerEaseLanding && npm run build",
+  "outputDirectory": "GrocerEaseLanding/dist"
+}
